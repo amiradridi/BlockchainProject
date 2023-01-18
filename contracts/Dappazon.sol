@@ -35,7 +35,7 @@ contract Dappazon {
         owner = msg.sender;
     }
 
-    function list(
+    function addItem(
         uint256 _id,
         string memory _name,
         string memory _category,
@@ -62,7 +62,7 @@ contract Dappazon {
         emit List(_name, _cost, _stock);
     }
 
-    function buy(uint256 _id) public payable {
+    function buyItem(uint256 _id) public payable {
         // Fetch item
         Item memory item = items[_id];
 

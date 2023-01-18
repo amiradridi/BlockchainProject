@@ -24,7 +24,7 @@ async function main() {
 
   // Listing items...
   for (let i = 0; i < items.length; i++) {
-    const transaction = await dappazon.connect(deployer).list(
+    const transaction = await dappazon.connect(deployer).addItem(
       items[i].id,
       items[i].name,
       items[i].category,

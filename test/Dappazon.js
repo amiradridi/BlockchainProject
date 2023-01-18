@@ -37,7 +37,7 @@ describe("Dappazon", () => {
 
     beforeEach(async () => {
       // List a item
-      transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
+      transaction = await dappazon.connect(deployer).addItem(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
       await transaction.wait()
     })
 
@@ -63,11 +63,11 @@ describe("Dappazon", () => {
 
     beforeEach(async () => {
       // List a item
-      transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
+      transaction = await dappazon.connect(deployer).addItem(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
       await transaction.wait()
 
       // Buy a item
-      transaction = await dappazon.connect(buyer).buy(ID, { value: COST })
+      transaction = await dappazon.connect(buyer).buyItem(ID, { value: COST })
       await transaction.wait()
     })
 
@@ -99,11 +99,11 @@ describe("Dappazon", () => {
 
     beforeEach(async () => {
       // List a item
-      let transaction = await dappazon.connect(deployer).list(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
+      let transaction = await dappazon.connect(deployer).addItem(ID, NAME, CATEGORY, IMAGE, COST, RATING, STOCK)
       await transaction.wait()
 
       // Buy a item
-      transaction = await dappazon.connect(buyer).buy(ID, { value: COST })
+      transaction = await dappazon.connect(buyer).buyItem(ID, { value: COST })
       await transaction.wait()
 
       // Get Deployer balance before
