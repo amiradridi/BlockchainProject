@@ -34,6 +34,7 @@ const Product = ({ item, provider, account, dappazon, togglePop }) => {
 
   useEffect(() => {
     fetchDetails()
+    // eslint-disable-next-line
   }, [hasBought])
 
   return (
