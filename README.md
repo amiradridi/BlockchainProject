@@ -2,6 +2,20 @@
 Dappazon is a clone of the amazon ecommerce application on the ethereum blockchain.
 Each item has an image stored in the IPFS.
 
+
+## Project architecture
+<p align="center">
+  <img src="./project documentation/project architecture.png" width="700" title="Project architecture" alt="Project architecture">
+</p>
+
+
+## Blockchain interaction with IPFS
+In addition to blockchain, we are using IPFS (interplanetary file system) to host the products’ pictures and we store references to those pictures on the blockchain.
+<p align="center">
+  <img src="./project documentation/ipfs.png" width="700" title="Blockchain interaction with IPFS" alt="Blockchain interaction with IPFS">
+</p>
+
+
 ## Technology Stack & Tools
 
 - Solidity (Writing Smart Contracts)
